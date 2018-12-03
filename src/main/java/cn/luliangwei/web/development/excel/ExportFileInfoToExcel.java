@@ -37,10 +37,10 @@ public class ExportFileInfoToExcel {
         
         //数据写入excel表中
         for(int i = 0 ; i< infos.size();i++) {
-            HSSFRow row1 = sheet.createRow(i+1);
-            row1.createCell(0).setCellValue(infos.get(i).num);
-            row1.createCell(1).setCellValue(infos.get(i).name);
-            row1.createCell(2).setCellValue(infos.get(i).course);
+            HSSFRow row_i = sheet.createRow(i+1);
+            row_i.createCell(0).setCellValue(infos.get(i).num);
+            row_i.createCell(1).setCellValue(infos.get(i).name);
+            row_i.createCell(2).setCellValue(infos.get(i).course);
         }
         
         try {
