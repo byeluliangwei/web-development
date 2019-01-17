@@ -15,7 +15,7 @@ public class ExportFileInfoToExcel {
 
     public static void main(String[] args) {
         
-        export(getInfos("d://test1"),"d://实验一.xls");
+        export(getInfos("d://助教//实验三"),"d://助教//实验三.xls");
     }
     
     //将需要导出的信息导出到目标文件中
@@ -59,7 +59,7 @@ public class ExportFileInfoToExcel {
         List<FileInfo> infos = new ArrayList<>();
         for(File f: files) {
             if(f.exists()) {
-                String fileName = f.getName().replace("\\.doc[x]?", "");
+                String fileName = f.getName().replaceAll("\\.doc[x]?", "");
                 String[] info = fileName.split("_");
                 FileInfo fi = new FileInfo(info[0], info[1], info[2]);
                 infos.add(fi);
